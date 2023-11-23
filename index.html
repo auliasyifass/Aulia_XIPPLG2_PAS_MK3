@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/aulia2.jpeg" type="image/x-icon" />
+  </head>
+    <title>Food Website_Portfolio</title>
+    <!-- CSS-link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+<header>
+  <!-- Logo with a link -->
+  <a href="#" class="logo"><img src="img/logo.png" alt="" /></a>
+
+  <!-- Navigation menu -->
+  <ul class="navmenu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#review">Review</a></li>
+    <li><a href="#home">Contact</a></li>
+  </ul>
+
+  <!-- Navigation icons -->
+  <div class="nav-icon"></div>
+  <a href="#" class="bx bx-search"></a>
+  <a href="#" class="bx bx-user"></a>
+  <a href="#" class="bx bx-cart"></a>
+
+  <!-- Search bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search..." />
+    <button id="searchButton"><i class="bx bx-search"></i></button>
+  </div>
+
+  <!-- Login button -->
+  <button id="loginButton">Login</button>
+
+  <!-- Menu icon -->
+  <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<!-- Main home section -->
+<section class="main-home" id="home">
+  <!-- Main text content -->
+  <div class="main-text">
+    <h5>Aulia Restaurant</h5>
+    <h1>Get Fresh Food <br />the Easy Way</h1>
+    <p>Kualitas dan Kecepatan, Kami Sajikan untuk Anda!</p>
+
+    <!-- Order Now button -->
+    <a href="#order" class="main-btn">Order Now <i class="bx bx-right-arrow-alt"></i></a>
+  </div>
+
+  <!-- Down arrow link for scrolling -->
+  <div class="down-arrow">
+    <a href="#trending" class="down"><i class="bx bx-down-arrow-alt"></i></a>
+  </div>
+</section>
+
+
+
+    <!-- Cart Modal -->
+<div id="cartModal" class="modal">
+  <!-- Modal Content -->
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span class="close" id="closeCartModal">&times;</span>
+
+    <!-- Modal Heading -->
+    <h2>Cart</h2>
+
+    <!-- Cart Items Container -->
+    <div id="cartItemsContainer"></div>
+  </div>
+</div>
+
+    <!-- About -->
+
+    <div class="about" id="about">
+      <div class="about_main">
+        <div class="image">
+          <img src="img/Food-Plate.png" alt="" />
+        </div>
+
+        <div class="about_text">
+          <h1><span>About</span> Us</h1>
+          <!-- Menambahkan spasi antara "About" dan "Us" -->
+          <h3>Why Choose Us?</h3>
+          <!-- Mengubah "us" menjadi "Us" dan "Choose us?" menjadi "Choose Us?" -->
+          <p>
+            Kami menjadi pilihan utama karena komitmen kami untuk menyajikan pengalaman kuliner yang tak tertandingi. Dengan menu beragam mulai dari pizza lezat, burger juicy, lasagna autentik, sandwich segar, es krim yang memikat, hingga hidangan klasik seperti hot dog, briyani, pasta, jus segar, dan spachi, kami berusaha memberikan cita rasa terbaik untuk setiap pelanggan. Kualitas bahan, keahlian memasak, dan pelayanan kami yang ramah menjadikan kami destinasi favorit untuk menikmati hidangan lezat dan memuaskan setiap selera. Nikmati pengalaman makan yang istimewa hanya di sini, karena kepuasan Anda adalah prioritas utama kami.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <!--Menu-->
+
+      <div class="menu" id="menu">
+        <h1>Our<span>Menu</span></h1>
+
+        <div class="menu_box">
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/buger.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Buger</h2>
+              <p>Nikmati kelezatan sejati dengan burger kami, dijamin membuat sensasi kebahagiaan!</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/pasta.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Pasta</h2>
+              <p>Pasta kami, hasil olahan terbaik dari bahan-bahan pilihan, siap memanjakan lidah Anda.</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/lasagna.webp" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Lasagna</h2>
+              <p>Nikmati lapisan-lapisan pasta lembut, saus kaya rasa, dan keju meleleh yang memikat.</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/chocolate_Drink.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Drink</h2>
+              <p>Nikmati sensasi cokelat yang tak tertandingi dengan minuman coklat spesial kami!</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/pizza.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Pizza</h2>
+              <p>Hadirkan kegembiraan pada meja makan Anda dengan Pizza istimewa kami.</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/Hot_dog.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Hot Dog</h2>
+              <p>Dibuat dengan sosis berkualitas , dan pilihan topping yang menggoda selera.</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/juse.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Juse</h2>
+              <p>Rasakan kesegaran buah-buahan pilihan dalam setiap gelas kami.</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/biryani.webp" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Biryani</h2>
+              <p>Nikmati aroma rempah yang khas dan luar biasa dari nasi dan daging yang berempah.</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/chocolate.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Chocolate</h2>
+              <p>Nikmati keindahan rasa dalam setiap gigitan dengan koleksi cokelat eksklusif kami!</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/ice_cream.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Ice Cream</h2>
+              <p> Pilih kelezatan favorit Anda dengan ice cream berkualitas tinggi kami.</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/Spanchi.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Spanchi</h2>
+              <p>Kelezatan terpadu dalam setiap lapisan span yang renyah,dan tak tertandingi</p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="menu_card">
+            <div class="menu_image">
+              <img src="img/sandwich.jpg" />
+            </div>
+
+            <div class="small_card">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="menu_info">
+              <h2>Sandwich</h2>
+              <p>Rasa gurih daging panggang hingga kesegaran sayuran, sandwich siap memanjakan lidah. </p>
+              <h3>$20.00</h3>
+              <div class="menu_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <a href="#order" class="menu_btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review Section -->
+
+<div class="review" id="review">
+  <!-- Judul halaman review -->
+  <h1>Customer<span>Review</span></h1>
+
+  <!-- Kotak review -->
+  <div class="review_box">
+
+    <!-- Kartu review pertama -->
+    <div class="review_card">
+      <!-- Profil pelanggan -->
+      <div class="review_profile">
+        <img src="img/review_1.png" />
+      </div>
+
+      <!-- Teks review -->
+      <div class="review_text">
+        <!-- Nama pelanggan -->
+        <h2 class="name">Anisa Cahyani</h2>
+
+        <!-- Rating -->
+        <div class="review_icon">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+
+        <!-- Ikon sosial media -->
+        <div class="review_social">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <!-- Ulasan pelanggan -->
+        <p>
+          Pizza nya sungguh luar biasa! Kulitnya tipis dan renyah, dengan saus tomat yang segar dan kejunya yang leleh. Pilihan toppingnya juga beragam dan lezat!
+        </p>
+      </div>
+    </div>
+
+    <!-- Kartu review kedua -->
+    <div class="review_card">
+      <!-- Profil pelanggan -->
+      <div class="review_profile">
+        <img src="img/review_2.png" />
+      </div>
+
+      <!-- Teks review -->
+      <div class="review_text">
+        <!-- Nama pelanggan -->
+        <h2 class="name">Daren Doe</h2>
+
+        <!-- Rating -->
+        <div class="review_icon">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+
+        <!-- Ikon sosial media -->
+        <div class="review_social">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <!-- Ulasan pelanggan -->
+        <p>
+          Burger mereka selalu memukau! Dagingnya juicy, rotinya lembut, dan kombinasi saus serta sayuran memberikan sensasi rasa yang luar biasa.
+        </p>
+      </div>
+    </div>
+
+    <!-- Kartu review ketiga -->
+    <div class="review_card">
+      <!-- Profil pelanggan -->
+      <div class="review_profile">
+        <img src="img/review_3.png" />
+      </div>
+
+      <!-- Teks review -->
+      <div class="review_text">
+        <!-- Nama pelanggan -->
+        <h2 class="name">Lintang Ayu</h2>
+
+        <!-- Rating -->
+        <div class="review_icon">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+
+        <!-- Ikon sosial media -->
+        <div class="review_social">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <!-- Ulasan pelanggan -->
+        <p>
+          Lasagna di sini begitu autentik! Lapisan pasta yang lembut, saus ragu yang kaya, dan kejunya yang melimpah membuatnya menjadi hidangan yang tak terlupakan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Kartu review keempat -->
+    <div class="review_card">
+      <!-- Profil pelanggan -->
+      <div class="review_profile">
+        <img src="img/review_4.png" />
+      </div>
+
+      <!-- Teks review -->
+      <div class="review_text">
+        <!-- Nama pelanggan -->
+        <h2 class="name">Rendi Rizky</h2>
+
+        <!-- Rating -->
+        <div class="review_icon">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+
+        <!-- Ikon sosial media -->
+        <div class="review_social">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <!-- Ulasan pelanggan -->
+        <p>
+          Briyani di sini sungguh lezat! Nasi yang aromatik dan daging yang empuk, disajikan dengan saus yang begitu meresap. Pilihan yang sempurna untuk pecinta masakan India.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!--Order-->
+    <div class="order" id="order">
+      <!-- Judul dan subjudul order -->
+      <h1><span>Order</span>Now</h1>
+    
+      <!-- Bagian utama formulir pemesanan -->
+      <div class="order_main">
+        <!-- Gambar ilustrasi pemesanan -->
+        <div class="order_image">
+          <img src="img/order_image.png" />
+        </div>
+    
+        <!-- Formulir pemesanan -->
+        <form action="#">
+          <!-- Input nama -->
+          <div class="input">
+            <p>Name</p>
+            <input type="text" placeholder="your name" />
+          </div>
+    
+          <!-- Input email -->
+          <div class="input">
+            <p>Email</p>
+            <input type="email" placeholder="your email" />
+          </div>
+    
+          <!-- Input nomor telepon -->
+          <div class="input">
+            <p>Number</p>
+            <input placeholder="your number" />
+          </div>
+    
+          <!-- Input jumlah pesanan -->
+          <div class="input">
+            <p>How Much</p>
+            <input type="number" placeholder="how many orders" />
+          </div>
+    
+          <!-- Input nama makanan -->
+          <div class="input">
+            <p>Your Order</p>
+            <input placeholder="food name" />
+          </div>
+    
+          <!-- Input alamat pengiriman -->
+          <div class="input">
+            <p>Address</p>
+            <input placeholder="your Address" />
+          </div>
+    
+          <!-- Tombol untuk melakukan pemesanan -->
+          <a href="#" class="order_btn">Order Now</a>
+        </form>
+      </div>
+    </div>
+    
+    <!--Footer-->
+
+    <footer>
+      <!-- Bagian utama footer -->
+      <div class="footer_main">
+        <!-- Tag untuk lokasi -->
+        <div class="footer_tag">
+          <h2>Location</h2>
+          <p>Purwokerto</p>
+          <p>Jatilawang</p>
+          <p>Jogjakarta</p>
+          <p>Wonosobo</p>
+        </div>
+    
+        <!-- Tag untuk tautan cepat -->
+        <div class="footer_tag">
+          <h2>Quick Link</h2>
+          <p>Home</p>
+          <p>Order</p>
+          <p>About</p>
+          <p>Menu</p>
+          <p>Reveiw</p>
+          <p>Contact</p>
+        </div>
+    
+        <!-- Tag untuk kontak -->
+        <div class="footer_tag">
+          <h2>Contact</h2>
+          <p>+62 12 3456 789</p>
+          <p>+62 25 5568456</p>
+          <p>auliasyifa123@gmail.com</p>
+          <p>anisaputri@gmail.com</p>
+        </div>
+    
+        <!-- Tag untuk layanan -->
+        <div class="footer_tag">
+          <h2>Our Service</h2>
+          <p>Fast Delivery</p>
+          <p>Easy Payments</p>
+          <p>24 x 7 Service</p>
+        </div>
+    
+        <!-- Tag untuk media sosial -->
+        <div class="footer_tag">
+          <h2>Follows</h2>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+    
+      <!-- Paragraf penutup -->
+      <p class="end">
+        Design by<span><i class="fa-solid fa-face-grin"></i> Aulia Syifa Syawalia </span>
+      </p>
+    </footer>
+    
+
+    <script>
+      // Ketika DOM telah dimuat
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mendapatkan elemen ikon pencarian
+        const searchIcon = document.querySelector(".bx.bx-search");
+        
+        // Mendapatkan elemen tombol pencarian dan input pencarian
+        const searchButton = document.getElementById("searchButton");
+        const searchInput = document.getElementById("searchInput");
+    
+        // Mendapatkan elemen area pencarian
+        const searchBar = document.querySelector(".search-bar");
+    
+        // Mengaktifkan atau menonaktifkan tampilan area pencarian saat ikon pencarian diklik
+        searchIcon.addEventListener("click", function () {
+          searchBar.classList.toggle("active");
+          searchInput.focus();
+        });
+    
+        // Menutup area pencarian saat klik di luar area tersebut
+        document.addEventListener("click", function (event) {
+          if (!searchBar.contains(event.target) && event.target !== searchButton) {
+            searchBar.classList.remove("active");
+          }
+        });
+    
+        // Mengelola input pencarian
+        searchButton.addEventListener("click", function () {
+          handleSearch();
+        });
+    
+        // Mengelola input pencarian ketika tombol Enter ditekan
+        searchInput.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            handleSearch();
+          }
+        });
+    
+        // Fungsi untuk mengelola hasil pencarian
+        function handleSearch() {
+          // Mengambil nilai input pencarian dan mengonversinya menjadi huruf kecil
+          const searchTerm = searchInput.value.toLowerCase();
+    
+          // Mengarahkan ke bagian tertentu berdasarkan nilai pencarian
+          switch (searchTerm) {
+            case "home":
+              window.location.href = "#home";
+              break;
+            case "about":
+              window.location.href = "#about";
+              break;
+            case "order":
+              window.location.href = "#order";
+              break;
+            case "review":
+              window.location.href = "#review";
+              break;
+            case "menu":
+              window.location.href = "#menu";
+              break;
+              case "contact":
+              window.location.href = "#home";
+              break;
+            default:
+              break;
+          }
+        }
+      });
+    </script>
+    
+    <script>
+const loginButton = document.getElementById("loginButton");
+
+loginButton.addEventListener("click", function () {
+  console.log("Button Login clicked!");
+});
+    </script>
+
+    <!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <!-- Tombol untuk Menutup Modal -->
+    <span class="close" id="closeModal">&times;</span>
+
+    <!-- Judul Modal -->
+    <h2>Login</h2>
+
+    <!-- Formulir Login -->
+    <form id="loginForm">
+      <!-- Label dan Input untuk Username -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <!-- Label dan Input untuk Password -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <!-- Tombol untuk Melakukan Login -->
+      <button type="button" id="submitLogin">Login</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Menunggu halaman sepenuhnya dimuat sebelum mengeksekusi skrip
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // Mendapatkan referensi ke elemen-elemen yang diperlukan dari DOM
+    const loginModal = document.getElementById("loginModal");
+    const closeModal = document.getElementById("closeModal");
+    const loginButton = document.getElementById("loginButton");
+    const submitLogin = document.getElementById("submitLogin");
+
+    // Menambahkan event listener untuk menampilkan modal login saat tombol login diklik
+    loginButton.addEventListener("click", function () {
+      loginModal.style.display = "block";
+    });
+
+    // Menambahkan event listener untuk menutup modal login saat tombol tutup diklik
+    closeModal.addEventListener("click", function () {
+      loginModal.style.display = "none";
+    });
+
+    // Menambahkan event listener untuk menutup modal login saat area luar diklik
+    window.addEventListener("click", function (event) {
+      if (event.target === loginModal) {
+        loginModal.style.display = "none";
+      }
+    });
+
+    // Menambahkan event listener untuk menutup modal login saat tombol submit login diklik
+    submitLogin.addEventListener("click", function () {
+      loginModal.style.display = "none";
+    });
+  });
+</script>
+
+<!-- Container untuk Menampilkan Gambar Item di Keranjang -->
+<div id="cartItemsImagesContainer"></div>
+
+<script>
+  // Menunggu halaman sepenuhnya dimuat sebelum mengeksekusi skrip
+  document.addEventListener("DOMContentLoaded", function () {
+    // Mendapatkan elemen-elemen yang diperlukan dari DOM
+    const cartButton = document.querySelector(".bx.bx-cart");
+    const cartModal = document.getElementById("cartModal");
+    const closeCartModal = document.getElementById("closeCartModal");
+    const cartItemsContainer = document.getElementById("cartItemsContainer");
+
+    // Daftar item di keranjang beserta nama dan harganya
+    const cartItems = [
+      { name: "Lasagna", price: 20.0 },
+      { name: "Biryani", price: 20.0 },
+      { name: "Sandwich", price: 20.0 },
+      { name: "Pasta", price: 20.0 },
+      { name: "Ice Cream", price: 20.0 },
+    ];
+
+    // Fungsi untuk memperbarui tampilan item di keranjang
+    function updateCartItems() {
+      // Menghapus semua item sebelum menambahkan yang baru
+      cartItemsContainer.innerHTML = "";
+
+      // Menambahkan item baru ke dalam container
+      cartItems.forEach((item) => {
+        const itemElement = document.createElement("div");
+        itemElement.classList.add("cart-item");
+        itemElement.innerHTML = `<span>${item.name}</span><span>$${item.price.toFixed(2)}</span>`;
+        cartItemsContainer.appendChild(itemElement);
+      });
+    }
+
+    // Menambahkan event listener untuk menampilkan keranjang saat tombol diklik
+    cartButton.addEventListener("click", function () {
+      cartModal.style.display = "block";
+      updateCartItems(); // Memastikan keranjang terupdate saat ditampilkan
+    });
+
+    // Menambahkan event listener untuk menutup modal keranjang saat tombol ditutup
+    closeCartModal.addEventListener("click", function () {
+      cartModal.style.display = "none";
+    });
+
+    // Menambahkan event listener untuk menutup modal keranjang saat area luar diklik
+    window.addEventListener("click", function (event) {
+      if (event.target === cartModal) {
+        cartModal.style.display = "none";
+      }
+    });
+  });
+</script>
+    <script src="java.js"></script>
+  </body>
+</html>

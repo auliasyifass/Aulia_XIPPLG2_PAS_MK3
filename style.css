@@ -1,0 +1,895 @@
+/* Reset CSS untuk menghilangkan margin, padding, dan membuat box-sizing border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Efek animasi saat scrolling */
+  font-family: "Jost", sans-serif; /* Menggunakan font "Jost" atau fallback ke sans-serif */
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Styling untuk bagian header */
+header {
+  position: fixed; /* Header tetap berada di atas dan tetap terlihat saat di-scroll */
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000; /* Menentukan tingkat tumpukan (z-index) agar tetap di atas elemen lain */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%; /* Padding atas dan bawah 20px, padding kanan kiri 10% dari lebar viewport */
+}
+
+/* Styling untuk logo */
+.logo img {
+  max-width: 120px; /* Lebar maksimum logo 120px */
+  height: auto; /* Tinggi logo disesuaikan agar tidak terdistorsi */
+}
+
+/* Styling untuk menu navigasi */
+.navmenu {
+  display: flex;
+}
+
+/* Styling untuk setiap tautan dalam menu navigasi */
+.navmenu a {
+  color: #2c2c2c; /* Warna teks */
+  font-size: 16px; /* Ukuran teks 16px */
+  text-transform: capitalize; /* Mengganti teks menjadi kapitalize (huruf besar di awal kata) */
+  padding: 10px 20px; /* Padding atas bawah 10px, padding kanan kiri 20px */
+  font-weight: 400; /* Ketebalan huruf */
+  transition: all 0.42s ease; /* Animasi transisi dengan durasi 0.42 detik */
+}
+
+/* Efek hover saat kursor di atas tautan menu navigasi */
+.navmenu a:hover {
+  color: #ee1c47; /* Warna teks berubah menjadi merah (#ee1c47) saat hover */
+}
+
+/* Styling untuk ikon navigasi */
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling untuk ikon dalam navigasi */
+.nav-icon i {
+  margin-right: 20px; /* Jarak kanan ikon 20px */
+  color: #2c2c2c; /* Warna ikon */
+  font-size: 25px; /* Ukuran ikon 25px */
+  font-weight: 400; /* Ketebalan huruf ikon */
+  transition: all 0.42s ease; /* Animasi transisi dengan durasi 0.42 detik */
+}
+
+/* Efek hover pada ikon navigasi */
+.nav-icon i:hover {
+  transform: scale(1.1); /* Memperbesar ikon saat hover */
+  color: #ee1c47; /* Warna ikon berubah menjadi merah (#ee1c47) saat hover */
+}
+
+/* Styling untuk ikon menu */
+#menu-icon {
+  font-size: 35px; /* Ukuran ikon menu 35px */
+  color: #2c2c2c; /* Warna ikon menu */
+  z-index: 100001; /* Menentukan tingkat tumpukan (z-index) agar tetap di atas elemen lain */
+  cursor: pointer; /* Mengubah kursor menjadi pointer saat diarahkan ke ikon */
+}
+/* Styling untuk elemen <section> */
+section {
+  padding: 5% 10%; /* Padding atas bawah 5%, padding kanan kiri 10% */
+}
+
+/* Styling untuk kelas .main-home */
+.main-home {
+  width: 100%; /* Lebar maksimum 100% dari parent element */
+  height: 100vh; /* Tinggi 100% dari viewport height */
+  background-image: url(img/bg.png); /* Menentukan gambar latar belakang */
+  background-position: center; /* Posisi gambar latar belakang di tengah */
+  background-size: cover; /* Menyesuaikan ukuran gambar latar belakang */
+  display: grid; /* Menggunakan grid layout */
+  grid-template-columns: repeat(1, 1fr); /* Satu kolom dengan ukuran fraksi 1 */
+  align-items: center; /* Posisi elemen di tengah vertikal */
+}
+
+/* Styling untuk kelas .main-text h5 */
+.main-text h5 {
+  color: #ee1c47; /* Warna teks merah (#ee1c47) */
+  font-size: 16px; /* Ukuran teks 16px */
+  text-transform: capitalize; /* Mengganti teks menjadi kapitalize (huruf besar di awal kata) */
+  font-weight: 500; /* Ketebalan huruf 500 */
+}
+
+/* Styling untuk kelas .main-text h1 */
+.main-text h1 {
+  color: #000; /* Warna teks hitam (#000) */
+  font-size: 65px; /* Ukuran teks 65px */
+  text-transform: capitalize; /* Mengganti teks menjadi kapitalize */
+  line-height: 1.1; /* Tinggi baris 1.1 */
+  font-weight: 600; /* Ketebalan huruf 600 */
+  margin: 6px 0 10px; /* Margin atas 6px, bawah 10px */
+}
+
+/* Styling untuk kelas .main-text p */
+.main-text p {
+  color: #333c56; /* Warna teks abu-abu tua (#333c56) */
+  font-size: 15px; /* Ukuran teks 15px */
+  font-style: italic; /* Gaya huruf italic */
+  margin-bottom: 20px; /* Margin bawah 20px */
+}
+
+/* Styling untuk kelas .main-btn */
+.main-btn {
+  display: inline-block; /* Menampilkan sebagai inline-block */
+  color: #111; /* Warna teks hitam (#111) */
+  font-size: 16px; /* Ukuran teks 16px */
+  font-weight: 500; /* Ketebalan huruf 500 */
+  text-transform: capitalize; /* Mengganti teks menjadi kapitalize */
+  border: 2px solid #111; /* Border dengan ketebalan 2px dan warna hitam (#111) */
+  padding: 12px 25px; /* Padding atas bawah 12px, padding kanan kiri 25px */
+  transition: all 0.42 ease; /* Animasi transisi dengan durasi 0.42 detik */
+}
+
+/* Efek hover pada kelas .main-btn */
+.main-btn:hover {
+  background-color: #000; /* Warna latar belakang hitam (#000) saat hover */
+  color: #fff; /* Warna teks putih (#fff) saat hover */
+}
+
+/* Styling untuk ikon dalam kelas .main-btn */
+.main-btn i {
+  vertical-align: middle; /* Posisi vertikal ikon di tengah */
+}
+
+/* Styling untuk elemen dengan kelas .down-arrow */
+.down-arrow {
+  position: absolute; /* Posisi absolute terhadap elemen induk terdekat yang di-position:relative */
+  top: 85%; /* Jarak dari atas 85% */
+  right: 11%; /* Jarak dari kanan 11% */
+}
+
+/* Styling untuk ikon dalam kelas .down i */
+.down i {
+  font-size: 30px; /* Ukuran ikon 30px */
+  color: #2c2c2c; /* Warna ikon (#2c2c2c) */
+  border: 2px solid #2c2c2c; /* Border dengan ketebalan 2px dan warna ikon */
+  border-radius: 50px; /* Border radius 50px untuk membuat sudut ikon bulat */
+  padding: 12px 12px; /* Padding atas bawah 12px, padding kanan kiri 12px */
+}
+
+/* Efek hover pada ikon dalam kelas .down i */
+.down i:hover {
+  background-color: #2c2c2c; /* Warna latar belakang hitam (#2c2c2c) saat hover */
+  color: #fff; /* Warna ikon putih (#fff) saat hover */
+  transition: all 0.42 ease; /* Animasi transisi dengan durasi 0.42 detik */
+}
+
+/*About*/
+/* Styling untuk elemen dengan kelas .about */
+.about {
+  width: 100%; /* Lebar maksimum 100% dari parent element */
+  height: 100vh; /* Tinggi 100% dari viewport height */
+  padding: 70px 0; /* Padding atas bawah 70px, padding kanan kiri 0 */
+}
+
+/* Styling untuk elemen dengan kelas .about_main di dalam .about */
+.about .about_main {
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Posisi elemen di tengah vertikal */
+  justify-content: space-around; /* Posisi elemen dengan jarak sekitar */
+}
+
+/* Styling untuk elemen dengan kelas .image img di dalam .about_main */
+.about .about_main .image img {
+  width: 800px; /* Lebar gambar 800px */
+  position: relative; /* Posisi relatif terhadap posisi normal */
+  top: 60px; /* Jarak dari atas 60px */
+}
+
+/* Styling untuk elemen dengan kelas .about_text h1 span di dalam .about_main */
+.about .about_main .about_text h1 span {
+  color: #fac031; /* Warna teks kuning (#fac031) */
+  margin-right: 15px; /* Margin kanan 15px */
+  font-family: mv boli; /* Jenis font MV Boli */
+}
+
+/* Styling untuk elemen dengan kelas .about_text h1 di dalam .about_main */
+.about .about_main .about_text h1 {
+  font-size: 55px; /* Ukuran teks 55px */
+  position: relative; /* Posisi relatif terhadap posisi normal */
+  bottom: 50px; /* Jarak dari bawah 50px */
+}
+
+/* Styling untuk elemen dengan kelas .about_text h3 di dalam .about_main */
+.about .about_main .about_text h3 {
+  font-size: 30px; /* Ukuran teks 30px */
+  margin: 0 0 50px 0; /* Margin bawah 50px, margin kanan kiri 0 */
+}
+
+/* Styling untuk elemen dengan kelas .about_text p di dalam .about_main */
+.about .about_main .about_text p {
+  width: 650px; /* Lebar teks 650px */
+  text-align: justify; /* Rata teks ke sisi kiri dan kanan */
+  margin-right: 30px; /* Margin kanan 30px */
+  line-height: 22px; /* Tinggi baris 22px */
+}
+
+/* Styling untuk elemen dengan kelas .about_btn di dalam .about */
+.about .about_btn {
+  background: #fac031; /* Warna latar belakang kuning (#fac031) */
+  padding: 12px 25px; /* Padding atas bawah 12px, padding kanan kiri 25px */
+  text-decoration: none; /* Tanpa dekorasi teks (misalnya, garis bawah) */
+  color: #fff; /* Warna teks putih (#fff) */
+  position: relative; /* Posisi relatif terhadap posisi normal */
+  left: 55%; /* Jarak dari kiri 55% */
+  bottom: 30px; /* Jarak dari bawah 30px */
+}
+
+/*Menu*/
+/* Styling untuk elemen dengan kelas .menu */
+.menu {
+  width: 100%; /* Lebar maksimum 100% dari parent element */
+  padding: 70px 0; /* Padding atas bawah 70px, padding kanan kiri 0 */
+}
+
+/* Styling untuk elemen h1 di dalam .menu */
+.menu h1 {
+  font-size: 55px; /* Ukuran teks 55px */
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Posisi elemen di tengah vertikal */
+  justify-content: center; /* Posisi elemen di tengah horizontal */
+  margin-bottom: 30px; /* Margin bawah 30px */
+}
+
+/* Styling untuk elemen span di dalam .menu h1 */
+.menu h1 span {
+  color: #fac031; /* Warna teks kuning (#fac031) */
+  margin-left: 15px; /* Margin kiri 15px */
+  font-family: mv boli; /* Jenis font MV Boli */
+}
+
+/* Styling untuk pseudo-element ::after di dalam .menu h1 span */
+.menu h1 span::after {
+  content: ""; /* Menghilangkan konten default */
+  width: 100%; /* Lebar 100% dari lebar parent element */
+  height: 2px; /* Tinggi garis 2px */
+  background: #fac031; /* Warna garis kuning (#fac031) */
+  display: block; /* Menampilkan sebagai blok */
+  position: relative; /* Posisi relatif terhadap posisi normal */
+  bottom: 15px; /* Jarak dari bawah 15px */
+}
+
+/* Styling untuk elemen dengan kelas .menu_box di dalam .menu */
+.menu .menu_box {
+  width: 95%; /* Lebar 95% dari parent element */
+  margin: 0 auto; /* Margin atas bawah 0, margin kanan kiri otomatis */
+  display: grid; /* Menggunakan grid layout */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 kolom dengan lebar yang sama */
+  grid-gap: 15px; /* Jarak antar grid 15px */
+}
+
+/* Styling untuk elemen dengan kelas .menu_card di dalam .menu_box */
+.menu .menu_box .menu_card {
+  width: 325px; /* Lebar 325px */
+  height: 480px; /* Tinggi 480px */
+  padding-top: 10px; /* Padding atas 10px */
+  margin-bottom: 20px; /* Margin bawah 20px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bayangan dengan warna rgba dan efek blur 10px */
+}
+
+/* Styling untuk elemen dengan kelas .menu_image di dalam .menu_card */
+.menu .menu_box .menu_card .menu_image {
+  width: 300px; /* Lebar 300px */
+  height: 245px; /* Tinggi 245px */
+  margin: 0 auto; /* Margin atas bawah 0, margin kanan kiri otomatis */
+  overflow: hidden; /* Tampilan gambar yang meluas */
+}
+
+/* Styling untuk elemen img di dalam .menu_image */
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%; /* Lebar 100% dari parent element */
+  height: 100%; /* Tinggi 100% dari parent element */
+  object-fit: cover; /* Objek gambar diatur agar mencakup area penuh tanpa merubah rasio aspek */
+  object-position: center; /* Posisi objek gambar di tengah */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Efek hover pada gambar di dalam .menu_image */
+.menu .menu_box .menu_card .menu_image:hover img {
+  transform: scale(1.1); /* Memperbesar gambar saat hover */
+}
+
+/* Styling untuk elemen dengan kelas .small_card di dalam .menu_card */
+.menu .menu_box .menu_card .small_card {
+  width: 45px; /* Lebar 45px */
+  height: 45px; /* Tinggi 45px */
+  float: right; /* Mengapung ke kanan */
+  position: relative; /* Posisi relatif terhadap posisi normal */
+  top: -240px; /* Jarak dari atas -240px */
+  right: -8px; /* Jarak dari kanan -8px */
+  opacity: 0; /* Opasitas 0 (tidak terlihat) */
+  border-radius: 7px; /* Radius sudut 7px */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Efek hover pada .small_card ketika .menu_card dihover */
+.menu .menu_box .menu_card:hover .small_card {
+  position: relative; /* Kembalikan posisi relatif */
+  top: -240px; /* Jarak dari atas -240px */
+  right: 20px; /* Jarak dari kanan 20px */
+  opacity: 1; /* Opasitas 1 (terlihat) */
+}
+
+/* Styling untuk elemen i di dalam .small_card */
+.menu .menu_box .menu_card .small_card i {
+  font-size: 25px; /* Ukuran teks 25px */
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Posisi elemen di tengah vertikal */
+  justify-content: center; /* Posisi elemen di tengah horizontal */
+  line-height: 50px; /* Tinggi baris 50px */
+  color: #000; /* Warna teks hitam */
+  cursor: pointer; /* Kursor berubah menjadi tangan saat dihover */
+  text-shadow: 0 0 6px #000; /* Efek bayangan teks */
+  transition: 0.2s; /* Efek transisi selama 0.2 detik */
+}
+
+/* Efek hover pada elemen i di dalam .small_card */
+.menu .menu_box .menu_card .small_card i:hover {
+  color: #fac031; /* Warna teks kuning (#fac031) saat dihover */
+}
+
+/* Styling untuk elemen h2 di dalam .menu_info */
+.menu .menu_box .menu_card .menu_info h2 {
+  width: 60%; /* Lebar 60% dari parent element */
+  text-align: center; /* Posisi teks di tengah horizontal */
+  margin: 10px auto 10px auto; /* Margin atas 10px, margin kiri kanan otomatis, margin bawah 10px */
+  font-size: 25px; /* Ukuran teks 25px */
+  color: #fac031; /* Warna teks kuning (#fac031) */
+}
+
+/* Styling untuk elemen p di dalam .menu_info */
+.menu .menu_box .menu_card .menu_info p {
+  text-align: center; /* Posisi teks di tengah horizontal */
+  margin-top: 8px; /* Margin atas 8px */
+  line-height: 21px; /* Tinggi baris 21px */
+}
+
+/* Styling untuk elemen h3 di dalam .menu_info */
+.menu .menu_box .menu_card .menu_info h3 {
+  text-align: center; /* Posisi teks di tengah horizontal */
+  margin-top: 10px; /* Margin atas 10px */
+}
+
+/* Styling untuk elemen dengan kelas .menu_icon di dalam .menu_info */
+.menu .menu_box .menu_card .menu_info .menu_icon {
+  color: #fac031; /* Warna teks kuning (#fac031) */
+  text-align: center; /* Posisi teks di tengah horizontal */
+  margin: 10px 0 10px 0; /* Margin atas 10px, margin kiri kanan otomatis, margin bawah 10px */
+}
+
+/* Styling untuk elemen dengan kelas .menu_btn di dalam .menu_info */
+.menu .menu_box .menu_card .menu_info .menu_btn {
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Posisi elemen di tengah vertikal */
+  justify-content: center; /* Posisi elemen di tengah horizontal */
+  text-decoration: none; /* Tanpa dekorasi teks */
+  color: white; /* Warna teks putih */
+  background: #000; /* Warna latar belakang hitam (#000) */
+  padding: 8px 10px; /* Padding atas bawah 8px, padding kiri kanan 10px */
+  margin: 0 80px; /* Margin kiri 0, margin kanan 80px */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Styling untuk elemen header dengan kelas .sticky */
+header.sticky {
+  background: #fff; /* Warna latar belakang putih (#fff) */
+  padding: 20px 10%; /* Padding atas bawah 20px, padding kiri kanan 10% */
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%); /* Bayangan dengan warna rgb(0, 0, 0, 10%) dan efek blur 10px */
+}
+
+/*Review*/
+/* Styling untuk elemen dengan kelas .review */
+.review {
+  width: 100%; /* Lebar 100% dari parent element */
+  height: 100vh; /* Tinggi 100% dari tinggi viewport */
+  padding: 70px 0; /* Padding atas bawah 70px, padding kiri kanan 0 */
+}
+
+/* Styling untuk elemen h1 di dalam .review */
+.review h1 {
+  font-size: 55px; /* Ukuran teks 55px */
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Posisi elemen di tengah vertikal */
+  justify-content: center; /* Posisi elemen di tengah horizontal */
+}
+
+/* Styling untuk elemen span di dalam .review h1 */
+.review h1 span {
+  margin-left: 15px; /* Margin kiri 15px */
+  color: #fac031; /* Warna teks kuning (#fac031) */
+  font-family: mv boli; /* Menggunakan font-family "mv boli" */
+}
+
+/* Styling untuk elemen ::after di dalam .review h1 span */
+.review h1 span::after {
+  content: ""; /* Konten kosong */
+  width: 100%; /* Lebar 100% dari parent element */
+  height: 2px; /* Tinggi 2px */
+  background: #fac031; /* Warna latar belakang kuning (#fac031) */
+  position: relative; /* Posisi relatif */
+  bottom: 15px; /* Jarak dari bawah -15px */
+  display: block; /* Menampilkan sebagai block element */
+}
+
+/* Styling untuk elemen dengan kelas .review_box */
+.review .review_box {
+  width: 95%; /* Lebar 95% dari parent element */
+  margin: 70px auto; /* Margin atas bawah 70px, margin kiri kanan otomatis */
+  display: flex; /* Menggunakan flexbox */
+}
+
+/* Styling untuk elemen dengan kelas .review_card */
+.review .review_box .review_card {
+  width: 350px; /* Lebar 350px */
+  height: 535px; /* Tinggi 535px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Efek bayangan dengan warna hitam rgba(0, 0, 0, 0.5) */
+  border-radius: 8px; /* Border-radius 8px */
+  padding: 8px 20px; /* Padding atas bawah 8px, padding kiri kanan 20px */
+  margin: 0 8px; /* Margin kiri 0, margin kanan 8px */
+}
+
+/* Styling untuk elemen dengan kelas .review_profile */
+.review .review_box .review_card .review_profile {
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Posisi elemen di tengah vertikal */
+  justify-content: center; /* Posisi elemen di tengah horizontal */
+  position: relative; /* Posisi relatif */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Efek hover pada .review_profile ketika .review_card dihover */
+.review .review_box .review_card:hover .review_profile {
+  transform: translateY(-60px); /* Translasi elemen ke atas sejauh -60px saat dihover */
+}
+
+/* Styling untuk elemen img di dalam .review_profile */
+.review .review_box .review_card .review_profile img {
+  width: 180px; /* Lebar 180px */
+  height: 180px; /* Tinggi 180px */
+  object-fit: cover; /* Menyesuaikan ukuran gambar tanpa merubah aspek rasio */
+  object-position: center; /* Posisi objek di tengah-tengah */
+  border-radius: 50%; /* Border-radius 50% (membuat gambar bulat) */
+  border: 5px solid #cccccc; /* Border dengan ketebalan 5px dan warna abu-abu (#cccccc) */
+}
+
+/* Styling untuk elemen dengan kelas .review_text */
+.review .review_box .review_card .review_text {
+  text-align: center; /* Posisi teks di tengah horizontal */
+}
+
+/* Styling untuk elemen dengan kelas .name di dalam .review_text */
+.review .review_box .review_card .review_text .name {
+  color: #000; /* Warna teks hitam */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Efek hover pada .name ketika .review_card dihover */
+.review .review_box .review_card:hover .review_text .name {
+  transform: translateY(-50px); /* Translasi elemen ke atas sejauh -50px saat dihover */
+}
+
+/* Styling untuk elemen dengan kelas .review_icon di dalam .review_text */
+.review .review_box .review_card .review_text .review_icon {
+  color: #fac031; /* Warna teks kuning (#fac031) */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Efek hover pada .review_icon ketika .review_card dihover */
+.review .review_box .review_card:hover .review_text .review_icon {
+  transform: translateY(-30px); /* Translasi elemen ke atas sejauh -30px saat dihover */
+}
+/* Styling untuk ikon sosial pada review */
+.review .review_box .review_card .review_text .review_social i {
+  margin: 5px 1px; /* Margin 5px atas bawah, 1px kiri kanan */
+  font-size: 15px; /* Ukuran font 15px */
+  opacity: 0; /* Opasitas 0, elemen tidak terlihat */
+  cursor: pointer; /* Menggunakan kursor pointer */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Efek hover pada ikon sosial ketika review card dihover */
+.review .review_box .review_card:hover .review_text .review_social i {
+  opacity: 1; /* Opasitas 1, elemen terlihat */
+  transform: translateY(-8px); /* Translasi elemen ke atas sejauh -8px saat dihover */
+}
+
+/* Styling untuk teks paragraf pada review */
+.review .review_box .review_card .review_text p {
+  text-align: center; /* Posisi teks di tengah horizontal */
+  line-height: 22px; /* Tinggi baris 22px */
+  transition: 0.3s; /* Efek transisi selama 0.3 detik */
+}
+
+/* Efek hover pada teks paragraf ketika review card dihover */
+.review .review_box .review_card:hover .review_text p {
+  margin-top: 5px; /* Margin atas 5px saat dihover */
+}
+
+/*Footer*/
+
+/* Styling untuk bagian footer */
+footer {
+  width: 100%; /* Lebar 100% */
+  padding: 30px 0 0 20px; /* Padding atas 30px, padding kanan 0, padding bawah 0, padding kiri 20px */
+  background: #eeeeee; /* Warna latar belakang #eeeeee */
+}
+
+/* Mengatur tata letak dari bagian utama footer */
+footer .footer_main {
+  display: grid; /* Menggunakan tata letak grid */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Membagi ruang menjadi lima kolom dengan lebar yang sama */
+}
+
+/* Mengatur tata letak dan gaya untuk setiap tag pada footer */
+footer .footer_main .footer_tag {
+  text-align: center; /* Posisi teks di tengah horizontal */
+}
+
+/* Mengatur tata letak dan gaya untuk judul pada footer */
+footer .footer_main .footer_tag h2 {
+  color: #000; /* Warna teks hitam */
+  margin-bottom: 25px; /* Margin bawah 25px */
+  font-size: 30px; /* Ukuran font 30px */
+}
+
+/* Mengatur tata letak dan gaya untuk paragraf pada footer */
+footer .footer_main .footer_tag p {
+  margin: 10px 0; /* Margin atas 10px, margin bawah 0 */
+}
+
+/* Mengatur tata letak dan gaya untuk ikon pada footer */
+footer .footer_main .footer_tag i {
+  margin: 0 5px; /* Margin kiri dan kanan 5px */
+  cursor: pointer; /* Menggunakan kursor pointer */
+}
+
+/* Efek hover pada ikon pada footer */
+footer .footer_main .footer_tag i:hover {
+  color: #fac031; /* Warna ikon berubah menjadi #fac031 saat dihover */
+}
+
+/* Mengatur tata letak dan gaya untuk elemen akhir footer */
+footer .end {
+  display: flex; /* Menggunakan tata letak flex */
+  align-items: center; /* Posisi elemen di tengah secara vertikal */
+  justify-content: center; /* Posisi elemen di tengah secara horizontal */
+  padding: 15px; /* Padding 15px */
+}
+
+/* Mengatur tata letak dan gaya untuk teks pada elemen akhir footer */
+footer .end span {
+  color: #fac031; /* Warna teks #fac031 */
+  margin-left: 10px; /* Margin kiri 10px */
+}
+
+/* Mengatur gaya untuk elemen scrollbar */
+::-webkit-scrollbar {
+  width: 13px; /* Lebar scrollbar 13px */
+}
+
+/* Mengatur gaya untuk track dari scrollbar */
+::-webkit-scrollbar-track {
+  border-radius: 15px; /* Radius sudut 15px */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Efek bayangan di dalam scrollbar */
+}
+
+/* Mengatur gaya untuk thumb dari scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #fac031; /* Warna thumb scrollbar #fac031 */
+  border-radius: 15px; /* Radius sudut 15px */
+}
+/* Order */
+
+/* Styling untuk bagian order */
+.order {
+  width: 100%; /* Lebar 100% */
+  height: 100vh; /* Tinggi 100% dari viewport */
+  padding: 70px 0; /* Padding atas 70px, padding bawah 0 */
+  background-image: url(image/bg2.jpg); /* Gambar latar belakang */
+  background-size: cover; /* Ukuran gambar latar belakang menyesuaikan */
+  background-position: center; /* Posisi gambar latar belakang di tengah */
+}
+
+/* Mengatur tata letak dan gaya untuk judul pada bagian order */
+.order h1 {
+  display: flex; /* Menggunakan tata letak flex */
+  align-items: center; /* Posisi elemen di tengah secara vertikal */
+  justify-content: center; /* Posisi elemen di tengah secara horizontal */
+  color: #000; /* Warna teks hitam */
+  font-size: 60px; /* Ukuran font 60px */
+  margin-top: 140px; /* Margin atas 140px */
+}
+
+/* Mengatur tata letak dan gaya untuk span pada judul order */
+.order h1 span {
+  color: #fac031; /* Warna teks span #fac031 */
+  margin-right: 15px; /* Margin kanan 15px */
+  font-family: mv boli; /* Menggunakan font family mv boli */
+}
+
+/* Efek garis setelah span pada judul order */
+.order h1 span::after {
+  content: ""; /* Menambahkan konten setelah elemen span */
+  width: 100%; /* Lebar 100% */
+  height: 2px; /* Tinggi 2px */
+  background: #fac031; /* Warna garis #fac031 */
+  display: block; /* Menampilkan sebagai blok */
+  position: relative; /* Posisi relatif */
+  bottom: 15px; /* Menggeser ke bawah sejauh 15px */
+}
+
+/* Mengatur tata letak dan gaya untuk bagian utama order */
+.order .order_main {
+  display: flex; /* Menggunakan tata letak flex */
+  align-items: center; /* Posisi elemen di tengah secara vertikal */
+  justify-content: space-around; /* Posisi elemen dengan ruang di sekitarnya */
+}
+
+/* Mengatur tata letak dan gaya untuk gambar pada bagian order */
+.order .order_main .order_image img {
+  width: 200px; /* Lebar gambar 200px */
+}
+
+/* Mengatur tata letak dan gaya untuk formulir pada bagian order */
+.order .order_main form {
+  display: grid; /* Menggunakan tata letak grid */
+  grid-template-columns: 1fr 1fr; /* Membagi ruang menjadi dua kolom dengan lebar yang sama */
+  grid-gap: 0 30px; /* Jarak antar kolom 30px */
+}
+
+/* Mengatur tata letak dan gaya untuk paragraf pada formulir order */
+.order .order_main form .input p {
+  line-height: 15px; /* Jarak antar baris 15px */
+}
+
+/* Mengatur tata letak dan gaya untuk elemen input pada formulir order */
+.order .order_main form .input {
+  margin: 5px; /* Margin 5px */
+}
+
+/* Mengatur tata letak dan gaya untuk input pada formulir order */
+.order .order_main form .input input {
+  width: 300px; /* Lebar input 300px */
+  height: 35px; /* Tinggi input 35px */
+  padding: 0 10px; /* Padding kiri dan kanan 10px, padding atas dan bawah 0 */
+  border: 2px solid #cccccc; /* Garis tepi dengan ketebalan 2px dan warna #cccccc */
+  background: #eeeeee; /* Warna latar belakang #eeeeee */
+  outline: none; /* Menghilangkan garis fokus */
+  border-radius: 3px; /* Radius sudut 3px */
+}
+
+/* Efek fokus pada input pada formulir order */
+.order .order_main form .input input:focus {
+  border: 2px solid #fac031; /* Garis tepi berwarna #fac031 saat fokus */
+}
+
+/* Mengatur tata letak dan gaya untuk tombol pada formulir order */
+.order .order_main form .order_btn {
+  padding: 5px 0; /* Padding atas dan bawah 5px, padding kiri dan kanan 0 */
+  background: #fac031; /* Warna latar belakang tombol #fac031 */
+  color: white; /* Warna teks putih */
+  width: 40%; /* Lebar tombol 40% dari parent */
+  text-align: center; /* Posisi teks di tengah */
+  margin-top: 3px; /* Margin atas 3px */
+  text-decoration: none; /* Tanpa dekorasi teks */
+}
+
+/* Media query untuk lebar layar kurang dari atau sama dengan 890px */
+@media (max-width: 890px) {
+  header {
+    padding: 20px 3%; /* Padding header diatur ulang */
+    transition: 0.4s; /* Efek transisi 0.4 detik */
+  }
+}
+
+/* Media query untuk lebar layar kurang dari atau sama dengan 630px */
+@media (max-width: 630px) {
+  .main-text h1 {
+    font-size: 50px; /* Ukuran font h1 diatur ulang */
+    transition: 0.4s; /* Efek transisi 0.4 detik */
+  }
+  .main-text h1 {
+    font-size: 18px; /* Ukuran font h1 diatur ulang */
+    transition: 0.4s; /* Efek transisi 0.4 detik */
+  }
+  .main-btn {
+    padding: 10px 20px; /* Padding tombol diatur ulang */
+    transition: 0.4s; /* Efek transisi 0.4 detik */
+  }
+}
+
+/* Media query untuk lebar layar kurang dari atau sama dengan 750px */
+@media (max-width: 750px) {
+  .navmenu {
+    position: absolute; /* Posisi absolut */
+    top: 100%; /* Jarak ke atas 100% dari parent */
+    right: -100%; /* Jarak ke kanan -100% dari parent */
+    width: 300px; /* Lebar 300px */
+    height: 130vh; /* Tinggi 130% dari viewport height */
+    background: #edfff1; /* Warna latar belakang */
+    display: flex; /* Menggunakan tata letak flex */
+    flex-direction: column; /* Tata letak kolom */
+    align-items: center; /* Posisi elemen di tengah secara vertikal */
+    padding: 120px 30px; /* Padding diatur ulang */
+    transition: all 0.42s; /* Efek transisi 0.42 detik untuk semua properti */
+  }
+  .navmenu a {
+    display: block; /* Menampilkan sebagai blok */
+    margin: 8px 0; /* Margin atas dan bawah 8px, margin kiri dan kanan 0 */
+  }
+  .navmenu.open {
+    right: 0; /* Jarak ke kanan 0 */
+  }
+}
+
+/* Gaya untuk elemen search-bar */
+.search-bar {
+  position: relative; /* Posisi relatif */
+  margin-left: 20px; /* Margin kiri 20px */
+  margin-right: 10px; /* Margin kanan 10px */
+  top: 20px; /* Jarak ke atas 20px */
+}
+
+/* Gaya untuk tombol loginButton */
+#loginButton {
+  font-size: 16px; /* Ukuran font 16px */
+  padding: 5px 30px; /* Padding atas 5px, padding kiri dan kanan 30px */
+  margin-left: 10px; /* Margin kiri 10px */
+  background-color: #4caf50; /* Warna latar belakang hijau */
+  color: #ebebeb; /* Warna teks putih */
+  border: none; /* Tanpa garis tepi */
+  border-radius: 4px; /* Radius sudut 4px */
+  cursor: pointer; /* Menunjukkan kursor pointer */
+  transition: background-color 0.3s ease; /* Efek transisi 0.3 detik dengan fungsi timing ease */
+}
+
+/* Efek hover pada tombol loginButton */
+#loginButton:hover {
+  background-color: #45a049; /* Warna latar belakang berubah saat dihover */
+  margin-right: 20px; /* Margin kanan 20px saat dihover */
+}
+
+/* Gaya untuk modal */
+.modal {
+  display: none; /* Tidak ditampilkan secara default */
+  position: fixed; /* Posisi elemen tetap */
+  z-index: 1; /* Indeks tumpukan 1 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Memunculkan bilah geser jika kontennya melebihi jendela modal */
+  background-color: rgba(0, 0, 0, 0.4); /* Warna latar belakang dengan transparansi */
+}
+
+/* Gaya untuk konten modal */
+.modal-content {
+  background-color: #fefefe; /* Warna latar belakang konten modal */
+  margin: 10% auto; /* Jarak atas dan bawah 10%, posisi tengah horizontal */
+  padding: 20px;
+  border: 1px solid #888; /* Garis tepi 1px solid abu-abu gelap */
+  width: 50%; /* Lebar modal */
+  border-radius: 8px; /* Radius sudut 8px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan elemen */
+}
+
+/* Gaya untuk tombol penutup modal */
+.close {
+  color: #aaa; /* Warna teks abu-abu muda */
+  float: right; /* Posisi mengambang di sebelah kanan */
+  font-size: 28px; /* Ukuran font 28px */
+  font-weight: bold; /* Teks tebal */
+}
+
+.close:hover,
+.close:focus {
+  color: #555; /* Warna teks berubah saat dihover atau difokuskan */
+  text-decoration: none; /* Tanpa dekorasi teks */
+  cursor: pointer; /* Menunjukkan kursor pointer */
+}
+
+/* Gaya untuk elemen form dalam modal */
+form {
+  margin-top: 20px; /* Jarak atas 20px */
+  border-color: blue; /* Warna garis batas form biru */
+}
+
+label {
+  display: block; /* Menampilkan sebagai blok */
+  margin-bottom: 8px; /* Jarak bawah 8px */
+  color: #000; /* Warna teks hitam */
+}
+
+input {
+  width: 100%; /* Lebar 100% dari parent */
+  padding: 5px; /* Padding 5px */
+  box-sizing: border-box; /* Padding dan border dihitung dalam lebar dan tinggi elemen */
+  margin-bottom: 16px; /* Jarak bawah 16px */
+  border: 1px solid #ccc; /* Garis tepi 1px solid abu-abu gelap */
+  border-radius: 4px; /* Radius sudut 4px */
+}
+
+/* Gaya untuk tata letak responsif pada layar dengan lebar kurang dari atau sama dengan 768px */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%; /* Lebar modal 100% saat layar kurang dari atau sama dengan 768px */
+  }
+  .search-container {
+    display: flex; /* Menampilkan sebagai flex container */
+    align-items: center; /* Posisi elemen dalam satu baris secara vertikal */
+  }
+}
+
+/* Gaya untuk modal keranjang belanja */
+#cartModal {
+  display: none; /* Tidak ditampilkan secara default */
+  position: fixed; /* Posisi elemen tetap */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan transparansi */
+  justify-content: center; /* Posisi elemen secara horizontal di tengah */
+  align-items: center; /* Posisi elemen secara vertikal di tengah */
+}
+
+/* Gaya untuk konten modal keranjang belanja */
+.cart-modal-content {
+  background: #fff; /* Warna latar belakang konten modal */
+  padding: 20px;
+  border-radius: 8px; /* Radius sudut 8px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bayangan elemen */
+  max-width: 400px; /* Lebar maksimal konten modal */
+  width: 100%; /* Lebar konten modal 100% */
+  text-align: center; /* Posisi teks di tengah */
+}
+
+/* Gaya untuk tombol penutup modal keranjang belanja */
+#closeCartModal {
+  position: absolute; /* Posisi absolut */
+  top: 10px; /* Jarak atas 10px */
+  right: 10px; /* Jarak kanan 10px */
+  cursor: pointer; /* Menunjukkan kursor pointer */
+}
+
+/* Gaya untuk item keranjang belanja */
+.cart-item {
+  display: flex; /* Menampilkan sebagai flex container */
+  justify-content: space-between; /* Meratakan elemen secara horizontal */
+  align-items: center; /* Posisi elemen secara vertikal di tengah */
+  margin-bottom: 10px; /* Jarak bawah 10px */
+  border-bottom: 1px solid #ccc; /* Garis tepi bawah 1px solid abu-abu gelap */
+  padding-bottom: 5px; /* Padding bawah 5px */
+}
+
+.cart-item span {
+  flex: 1; /* Menggunakan fleksibilitas 1 */
+}
+
+.cart-item:last-child {
+  border-bottom: none; /* Tidak ada garis tepi bawah untuk elemen terakhir */
+  padding-bottom: 0; /* Padding bawah 0 untuk elemen terakhir */
+}
+
+/* Gaya untuk tombol keranjang belanja */
+.bx.bx-cart {
+  cursor: pointer; /* Menunjukkan kursor pointer */
+}
+
+/* Gaya font dan reset margin dan padding untuk body */
+body {
+  font-family: "Arial", sans-serif; /* Menggunakan font Arial atau sans-serif jika tidak tersedia */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
